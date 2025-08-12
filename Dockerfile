@@ -7,11 +7,3 @@ RUN mkdir -p /tmp/download && \
     mv /tmp/download/docker/docker* /usr/bin/ && \
     chmod +x /usr/bin/docker* && \
     rm -rf /tmp/download
-
-ENV DAPPER_ENV REPO TAG DRONE_TAG
-ENV DAPPER_SOURCE /go/src/github.com/rancher/agent/
-ENV DAPPER_OUTPUT ./bin ./dist
-ENV DAPPER_DOCKER_SOCKET true
-ENV TRASH_CACHE ${DAPPER_SOURCE}/.trash-cache
-ENV HOME ${DAPPER_SOURCE}
-WORKDIR ${DAPPER_SOURCE}
