@@ -104,10 +104,10 @@ Please visit the [extensions](https://github.com/gogo/protobuf/blob/master/exten
 
 Install protoc-gen-gogo:
 
-    go install github.com/gogo/protobuf/proto
-    go install github.com/gogo/protobuf/jsonpb
-    go install github.com/gogo/protobuf/protoc-gen-gogo
-    go install github.com/gogo/protobuf/gogoproto
+    go install github.com/gogo/protobuf/proto@latest
+    go install github.com/gogo/protobuf/jsonpb@latest
+    go install github.com/gogo/protobuf/protoc-gen-gogo@latest
+    go install github.com/gogo/protobuf/gogoproto@latest
 
 ## GRPC
 
