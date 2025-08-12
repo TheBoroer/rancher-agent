@@ -7,7 +7,7 @@ go:
   - tip
 
 install:
-  - if ! go get code.google.com/p/go.tools/cmd/cover; then go get golang.org/x/tools/cmd/cover; fi
+  - if ! go install code.google.com/p/go.tools/cmd/cover; then go install golang.org/x/tools/cmd/cover; fi
 
 script:
   - go test -cover

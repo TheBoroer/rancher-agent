@@ -123,7 +123,7 @@ vet:
 	go tool vet --shadow .
 
 errcheck:
-	go get github.com/kisielk/errcheck
+	go install github.com/kisielk/errcheck
 	errcheck ./test/...
 
 drone:
@@ -131,7 +131,7 @@ drone:
 	(cd $(GOPATH)/src/github.com/gogo/protobuf && make buildserverall)
 
 testall:
-	go get -u github.com/golang/protobuf/proto
+	go install -u github.com/golang/protobuf/proto
 	make -C protoc-gen-gogo/testdata test
 	make -C vanity/test test
 	make -C test/registration test
@@ -146,7 +146,7 @@ contributors:
 
 js:
 ifeq (go1.8, $(findstring go1.8, $(GO_VERSION)))
-	go get github.com/gopherjs/gopherjs
+	go install github.com/gopherjs/gopherjs
 	gopherjs build github.com/gogo/protobuf/protoc-gen-gogo
 endif
 

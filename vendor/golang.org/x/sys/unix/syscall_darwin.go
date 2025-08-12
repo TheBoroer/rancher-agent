@@ -31,7 +31,7 @@ func Getwd() (string, error) {
 			return wd[:len(wd)-1], nil
 		}
 	}
-	// If pkg/os/getwd.go gets ENOTSUP, it will fall back to the
+	// If pkg/os/getwd.go installs ENOTSUP, it will fall back to the
 	// slow algorithm.
 	return "", ENOTSUP
 }

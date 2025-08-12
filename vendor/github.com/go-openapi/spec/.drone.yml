@@ -10,11 +10,11 @@ build:
     image: golang:$$GO_VERSION
     pull: true
     commands:
-      - go get -u github.com/stretchr/testify/assert
-      - go get -u gopkg.in/yaml.v2
-      - go get -u github.com/go-openapi/swag
-      - go get -u github.com/go-openapi/jsonpointer
-      - go get -u github.com/go-openapi/jsonreference
+      - go install -u github.com/stretchr/testify/assert
+      - go install -u gopkg.in/yaml.v2
+      - go install -u github.com/go-openapi/swag
+      - go install -u github.com/go-openapi/jsonpointer
+      - go install -u github.com/go-openapi/jsonreference
       - go test -race
       - go test -v -cover -coverprofile=coverage.out -covermode=count ./...
 

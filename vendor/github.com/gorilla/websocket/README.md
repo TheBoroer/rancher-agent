@@ -5,9 +5,9 @@ Gorilla WebSocket is a [Go](http://golang.org/) implementation of the
 
 ### Documentation
 
-* [API Reference](http://godoc.org/github.com/gorilla/websocket)
-* [Chat example](https://github.com/gorilla/websocket/tree/master/examples/chat)
-* [File watch example](https://github.com/gorilla/websocket/tree/master/examples/filewatch)
+- [API Reference](http://godoc.org/github.com/gorilla/websocket)
+- [Chat example](https://github.com/gorilla/websocket/tree/master/examples/chat)
+- [File watch example](https://github.com/gorilla/websocket/tree/master/examples/filewatch)
 
 ### Status
 
@@ -17,7 +17,7 @@ package API is stable.
 
 ### Installation
 
-    go get github.com/gorilla/websocket
+    go install github.com/gorilla/websocket
 
 ### Protocol Compliance
 
@@ -46,14 +46,13 @@ subdirectory](https://github.com/gorilla/websocket/tree/master/examples/autobahn
 <tr><td>Write message using io.WriteCloser</td><td><a href="http://godoc.org/github.com/gorilla/websocket#Conn.NextWriter">Yes</a></td><td>No, see note 3</td></tr>
 </table>
 
-Notes: 
+Notes:
 
 1. Large messages are fragmented in [Chrome's new WebSocket implementation](http://www.ietf.org/mail-archive/web/hybi/current/msg10503.html).
 2. The application can get the type of a received data message by implementing
    a [Codec marshal](http://godoc.org/golang.org/x/net/websocket#Codec.Marshal)
    function.
 3. The go.net io.Reader and io.Writer operate across WebSocket frame boundaries.
-  Read returns when the input buffer is full or a frame boundary is
-  encountered. Each call to Write sends a single frame message. The Gorilla
-  io.Reader and io.WriteCloser operate on a single WebSocket message.
-
+   Read returns when the input buffer is full or a frame boundary is
+   encountered. Each call to Write sends a single frame message. The Gorilla
+   io.Reader and io.WriteCloser operate on a single WebSocket message.

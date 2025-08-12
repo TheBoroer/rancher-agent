@@ -3,7 +3,7 @@
 Diskv (disk-vee) is a simple, persistent key-value store written in the Go
 language. It starts with an incredibly simple API for storing arbitrary data on
 a filesystem by key, and builds several layers of performance-enhancing
-abstraction on top.  The end result is a conceptually simple, but highly
+abstraction on top. The end result is a conceptually simple, but highly
 performant, disk-backed storage system.
 
 [![Build Status][1]][2]
@@ -11,20 +11,18 @@ performant, disk-backed storage system.
 [1]: https://drone.io/github.com/peterbourgon/diskv/status.png
 [2]: https://drone.io/github.com/peterbourgon/diskv/latest
 
-
 # Installing
 
 Install [Go 1][3], either [from source][4] or [with a prepackaged binary][5].
 Then,
 
 ```bash
-$ go get github.com/peterbourgon/diskv
+$ go install github.com/peterbourgon/diskv
 ```
 
 [3]: http://golang.org
 [4]: http://golang.org/doc/install/source
 [5]: http://golang.org/doc/install
-
 
 # Usage
 
@@ -61,7 +59,6 @@ func main() {
 ```
 
 More complex examples can be found in the "examples" subdirectory.
-
 
 # Theory
 
@@ -133,9 +130,8 @@ compressed; the cost of decompression is borne with each Read.
 diskv also now provides ReadStream and WriteStream methods, to allow very large
 data to be handled efficiently.
 
-
 # Future plans
 
- * Needs plenty of robust testing: huge datasets, etc...
- * More thorough benchmarking
- * Your suggestions for use-cases I haven't thought of
+- Needs plenty of robust testing: huge datasets, etc...
+- More thorough benchmarking
+- Your suggestions for use-cases I haven't thought of
