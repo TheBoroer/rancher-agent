@@ -12,7 +12,7 @@ import (
 	"github.com/rancher/agent/cluster"
 	"github.com/rancher/agent/node"
 	"github.com/rancher/rancher/pkg/remotedialer"
-	"github.com/sirupsen/logrus"
+	"github.com/Sirupsen/logrus"
 )
 
 const (

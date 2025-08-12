@@ -5,7 +5,7 @@ import (
 	"strings"
 
 	"github.com/rancher/norman/types/slice"
-	"github.com/sirupsen/logrus"
+	"github.com/Sirupsen/logrus"
 )
 
 func TokenAndURL() (string, string, error) {
